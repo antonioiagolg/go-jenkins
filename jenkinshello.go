@@ -7,7 +7,7 @@ import (
 )
 
 func Hello(o io.Writer, name string) {
-	fmt.Fprintf(o, "Hello %v", name)
+	fmt.Fprintf(o, "Hello, %v", name)
 }
 
 func main() {
