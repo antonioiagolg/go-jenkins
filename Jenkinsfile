@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo 'Building...'
                 sh 'go build .'
-                archiveArtifacts artifacts: '**/*.exe', fingerprint: true
+                archiveArtifacts artifacts: 'go_jenkins', fingerprint: true
             }
         }
 
