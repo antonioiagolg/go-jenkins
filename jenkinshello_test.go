@@ -16,3 +16,10 @@ func TestHello(t *testing.T) {
 		}
 	})
 }
+
+func BenchmarkHello(b *testing.B) {
+	buffer := bytes.Buffer{}
+	for i := 0; i < b.N; i++ {
+		Hello(&buffer, "Antonio")
+	}
+}

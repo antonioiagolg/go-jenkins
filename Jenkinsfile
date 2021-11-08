@@ -22,6 +22,13 @@ pipeline {
             }
         }
 
+        stage('Benchmark') {
+            steps {
+                echo 'Benchmarking...'
+                sh 'go test -bench .'
+            }
+        }
+
         stage('Deploy bin') {
             steps {
                 echo 'Deploying'
