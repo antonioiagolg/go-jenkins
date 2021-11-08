@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo 'Building...'
                 go build .
-                archiveArtifacts artifacts:'**/*.exe', fingerprint: true
+                archiveArtifacts artifacts: '**/*.exe', fingerprint: true
             }
         }
 
