@@ -21,5 +21,12 @@ pipeline {
                 sh 'go test'
             }
         }
+
+        stage('Deploy bin') {
+            steps {
+                echo 'Deploying'
+                sh 'ls -l'
+            }
+        }
     }
 }
