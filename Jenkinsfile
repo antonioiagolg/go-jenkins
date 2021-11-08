@@ -4,7 +4,7 @@ pipeline {
         stage('Build Hello') {
             steps {
                 echo 'Building...'
-                bat 'go build .'
+                sh 'go build .'
                 archiveArtifacts artifacts: '**/*.exe', fingerprint: true
             }
         }
